@@ -1,0 +1,90 @@
+*{
+  font-family: arial;
+  user-select: none;
+}
+
+#createControll{
+  width: 340px;
+  height: 150px;
+  background-color: #bdbdbd;
+  padding: 5px;
+}
+
+#width{
+  width: 40px;
+}
+
+#height{
+  width: 40px;
+}
+
+#cells_size{
+  width: 40px;
+}
+
+#controll{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 300px;
+  height: 100%;
+  background-color: #bdbdbd;
+  padding-left: 10px;
+  display: block;
+}
+
+#speed{
+  width: 40px;
+}
+
+#wrapped:focus-visible, #speed:focus-visible, #width:focus-visible, #height:focus-visible, #cells_size:focus-visible, #saveName:focus-visible{
+  outline: none;
+}
+
+#saves{
+  position: relative;
+  display: block;
+  top: 7px;
+  left: 0px;
+  padding: 0px;
+  margin: 0px;
+  width: 300px;
+  height: 150px;
+  background-color: #2d2d2d55;
+  overflow-y: scroll;
+}
+
+.save{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  padding-top: 10px;
+  margin: 5px;
+  text-align: center;
+  width: 270px;
+  height: 30px;
+  background-color: #2d2d2d55;
+  border-radius: 5px;
+}
+
+.save:hover{
+  cursor: pointer;
+  background-color: #2d2d2d99;
+}
+
+#rules{
+  position: relative;
+  top: 7px;
+  left: 0px;
+  padding-top: 10px;
+  margin: 0px;
+  padding-left: 10px;
+  background-color: #2d2d2d55;
+  width: 290px;
+  height: 280px;
+  overflow-y: scroll;
+}
+
+#rTitle{
+  text-align: center;
+}

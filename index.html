@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2D Cellular Automaton</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="assets/styleSheets/style.css"/>
+    <div id="main">
+      <div id="createControll">
+        Width (Number of cells horizontally) : <input type="number" name="width" id="width"/><br><br>
+        Height (Number of cells vertically) : <input type="number" name="height" id="height"/><br><br>
+        Cell Size (in pixels): <input type="number" name="cells_size" id="cells_size"/><br><br>
+        <button id="create" onclick="createGridFromForm()">Create</button>
+      </div>
+    </div>
+    <div id="controll">
+      <br>
+      <button id="start" onclick="mg.start(mg.speed)">Start</button>
+      <button id="Stop" onclick="mg.stop()">Stop</button>
+      <button id="randomize" onclick="mg.randomize(document.getElementById('rRange').value/100)">Randomize</button>
+      <button id="chageGrid" onclick="changeGrid()">Change Grid</button><br><br>
+      Dencity to randomize :
+      <input type="range" name="rRange" id="rRange"/><br><br>
+      Borders :
+      <select name="wrapped" id="wrapped" onchange="mg.change_wrapped()">
+        <option value="wrapped" selected>Wrapped</option>
+        <option value="Blocked">Blocked</option>
+      </select><br><br>
+      Speed (in fps) : <input type="number" name="speed" id="speed" value="15" onchange="mg.changeSpeed(this.value)"/><br><br>
+      Saves : <input type="text" id="saveName" placeholder="Save Name" maxlength="15"/>
+      <button onClick="saveState()">Save</button>
+      <div id="saves">
+      </div><br>
+      <div id="rules">
+        <p id="rTitle">Rules :</p>
+        1. Every cell has two possible states <br> &nbsp;&nbsp;&nbsp; either dead or alive. <br><br>
+        2. Every cell has 8 neighbours. <br><br>
+        3. If an alive cell is surrounded by <br> &nbsp;&nbsp;&nbsp; more than 3 or less than 2 alive <br> &nbsp;&nbsp;&nbsp; cells it dies. <br><br>
+        4. If a dead cell is surrounded by <br> &nbsp;&nbsp;&nbsp; exactly 3 alive cells it becomes <br> &nbsp;&nbsp;&nbsp; alive.
+      </div>
+    </div>
+    <script type="text/javascript" src="assets/scripts/classes.js"></script>
+    <script type="text/javascript" src="assets/scripts/script.js"></script>
+  </body>
+</html>
